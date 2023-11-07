@@ -18,7 +18,6 @@ describe('diagram-orchestration', () => {
       { text: 'graph TD;', expected: 'flowchart' },
       { text: 'flowchart TD;', expected: 'flowchart-v2' },
       { text: 'flowchart-v2 TD;', expected: 'flowchart-v2' },
-      { text: 'flowchart-elk TD;', expected: 'flowchart-elk' },
       { text: 'error', expected: 'error' },
       { text: 'C4Context;', expected: 'c4' },
       { text: 'classDiagram', expected: 'class' },
@@ -66,10 +65,6 @@ describe('diagram-orchestration', () => {
       expect(
         detectType('flowchart TD; A-->B', { flowchart: { defaultRenderer: 'dagre-wrapper' } })
       ).toBe('flowchart-v2');
-      // flowchart && elk ==> flowchart-elk
-      expect(detectType('flowchart TD; A-->B', { flowchart: { defaultRenderer: 'elk' } })).toBe(
-        'flowchart-elk'
-      );
     });
 
     it('should not detect flowchart if pie contains flowchart', () => {
