@@ -977,7 +977,7 @@ export interface StateDiagramConfig extends BaseDiagramConfig {
    * Decides which rendering engine that is to be used for the rendering.
    *
    */
-  defaultRenderer?: string | 'dagre-d3' | 'dagre-wrapper' | 'elk';
+  defaultRenderer?: string | 'dagre-d3' | 'dagre-wrapper';
 }
 /**
  * This interface was referenced by `MermaidConfig`'s JSON-Schema
@@ -1001,7 +1001,7 @@ export interface ClassDiagramConfig extends BaseDiagramConfig {
    * Decides which rendering engine that is to be used for the rendering.
    *
    */
-  defaultRenderer?: string | 'dagre-d3' | 'dagre-wrapper' | 'elk';
+  defaultRenderer?: string | 'dagre-d3' | 'dagre-wrapper';
   nodeSpacing?: number;
   rankSpacing?: number;
   /**
@@ -1455,7 +1455,7 @@ export interface FlowchartDiagramConfig extends BaseDiagramConfig {
    * Decides which rendering engine that is to be used for the rendering.
    *
    */
-  defaultRenderer?: string | 'dagre-d3' | 'dagre-wrapper' | 'elk';
+  defaultRenderer?: string | 'dagre-d3' | 'dagre-wrapper';
   /**
    * Width of nodes where text is wrapped.
    *

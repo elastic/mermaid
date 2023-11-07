@@ -5,8 +5,7 @@ const id = 'flowchart-v2';
 
 const detector: DiagramDetector = (txt, config) => {
   if (
-    config?.flowchart?.defaultRenderer === 'dagre-d3' ||
-    config?.flowchart?.defaultRenderer === 'elk'
+    config?.flowchart?.defaultRenderer === 'dagre-d3'
   ) {
     return false;
   }

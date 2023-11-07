@@ -1257,15 +1257,13 @@ $defs: # JSON Schema definition (maybe we should move these to a separate file)
         enum:
           - dagre-d3
           - dagre-wrapper
-          - elk
         # todo, check this, old docs said dagre-d3 even though value was dagre-wrapper
         default: dagre-wrapper
         meta:enum:
           dagre-d3: The [dagre-d3-es](https://www.npmjs.com/package/dagre-d3-es) library.
           dagre-wrapper: wrapper for dagre implemented in mermaid
-          elk: Layout using [elkjs](https://github.com/kieler/elkjs)
         # Allow any string for typescript backwards compatibility (fix in Mermaid v10)
-        tsType: 'string | "dagre-d3" | "dagre-wrapper" | "elk"'
+        tsType: 'string | "dagre-d3" | "dagre-wrapper"'
 
   ClassDiagramConfig:
     title: Class Diagram Config
